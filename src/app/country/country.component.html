@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+    <h1>
+        Stats By Country
+    </h1>
+    <div>
+    <h2>
+        <input type="text" placeholder="Search by Country name"
+        style="width:300px" [(ngModel)]="searchTerm"/>
+    </h2>
+    <ng-container *ngFor="let data of this.filteredcountry" style="text-align:center">
+        <div class="country-stats">
+            <ul>
+                <li>
+                    <p>Country: {{data.Country}}</p>
+                    <p>Total Confirmed: {{data.TotalConfirmed}}</p>
+                    <p>Total Recovered: {{data.TotalRecovered}}</p>
+                    <p>Total Deaths: {{data.TotalDeaths}}</p>
+                </li>
+            </ul> 
+        </div>
+    </ng-container>
+    </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

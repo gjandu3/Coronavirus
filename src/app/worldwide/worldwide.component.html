@@ -1,0 +1,21 @@
+<div class="container">
+    <div style="text-align:center">
+      <h1>
+        Global Stats
+      </h1>
+      <div>
+      <ng-container  style="text-align:center">
+        <h3>
+          Total Confirmed: {{this.data.TotalConfirmed}}
+       </h3>
+       <h3>
+          Total Deaths: {{this.data.TotalDeaths}}
+       </h3>
+       <h3>
+          Total Recovered: {{this.data.TotalRecovered}}
+        </h3>
+      </ng-container>
+      </div>
+     </div>
+    <router-outlet></router-outlet>
+  </div>
