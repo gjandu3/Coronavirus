@@ -9,7 +9,11 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getCovid() {
-    return this.http.get('https://api.covid19api.com/summary'); 
+    return this.http.get('https://api.covid19api.com/summary',  {
+      headers: {
+          "Authorization": 'Token token="X-Access-Token"'
+      }
+    }); 
   }
 
 }
